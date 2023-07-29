@@ -46,7 +46,7 @@ class ProductController {
                 })
             }
 
-            const result = productModel.create({
+            const result = await productModel.create({
                 id: id,
                 image: image,
                 name: name,
@@ -75,7 +75,7 @@ class ProductController {
                 })
             }
 
-            const result = productModel.updateOne({
+            const result = await productModel.updateOne({
                 id: id
             },
             {
@@ -99,7 +99,7 @@ class ProductController {
     async deleteProduct(req,res){
         const id = req.params.id
         try {
-            const result = productModel.deleteOne({
+            const result = await productModel.deleteOne({
                 id: id
             })
 
