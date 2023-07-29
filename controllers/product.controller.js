@@ -1,5 +1,3 @@
-const data = require('../app/data/shoes.json')
-const serveData = Object.assign(data);
 const productModel = require('../models/product.model')
 
 class ProductController {
