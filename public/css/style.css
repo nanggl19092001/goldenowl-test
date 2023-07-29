@@ -1,0 +1,273 @@
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    margin: 0
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#background-container {
+    z-index: -1;
+    position: fixed;
+    justify-content: end;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F6C90E;
+}
+
+#background-upper-part{
+    height: 50%;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 795px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card {
+    display: inline-block;
+    width: 300px;
+    height: 600px;
+    padding: 12px 28px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 28px;
+    background-color: white;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+.yellow-cirle {
+    position: relative;
+    border-radius: 10rem;
+    width: 250px;
+    height: 300px;
+    background-color: #F6C90E;
+    top: -150px;
+    left: -150px;
+    z-index: 0;
+}
+
+.heading {
+    margin-top: -300px;
+    position: relative;
+}
+
+.list {
+    position: relative;
+    flex-grow: 1;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+.shoe-container {
+    margin-bottom: 80px;
+}
+
+.shoe-image-container {
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
+.shoe-image {
+    width: 200px;
+    transform: rotate(-25deg);
+    filter: drop-shadow(0px 30px 40px rgb(0, 0, 0));
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-to-cart-button {
+    border-radius: 28px;
+    padding: 1rem;
+    background-color: #F6C90E;
+    font-weight: bolder;
+    border: none;
+    animation-duration: 1s;
+    animation-name: addtocartapear;
+}
+
+
+@keyframes addtocartapear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.add-to-cart-button-fade-out {
+    animation-duration: 1s;
+    animation-name: addbuttonfadeout;
+}
+
+@keyframes addbuttonfadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.add-to-cart-existed-button {
+    border-radius: 50px;
+    padding: 0.5rem;
+    background-color: #F6C90E;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: existed;
+    animation-duration: 1s;
+}
+
+@keyframes existed {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.add-to-cart-existed-button img {
+    width: 28px;
+}
+
+.add-to-cart-button:hover {
+    cursor: pointer;
+}
+
+#cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-total h2,h3 {
+    display: flex;
+}
+
+.cart-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    align-items:start;
+    animation-name: existed;
+    animation-duration: 1s
+}
+
+.cart-item-fade-out {
+    animation-name: cartitemfadeout;
+    animation-duration: 1s;
+}
+
+@keyframes cartitemfadeout {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.cart-shoe-container {
+    display: inline-block;
+    border-radius: 100px;
+    width: 90px;
+    height: 90px;
+    box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 18px;
+    margin-right: 2rem;
+    margin-top: 1rem
+}
+
+.cart-shoe-image {
+    position: relative;
+    width: 120px;
+    transform: rotate(-25deg);
+    top: -40px;
+    left: -15px;
+}
+
+.shoe-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shoe-btn-container button {
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    border: none;
+}
+
+.shoe-btn-container img {
+    width: 15px;
+    height: 15px;
+}
+
+.shoe-increament-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.shoe-increament-container img {
+    width: 10px;
+    height: 10px;
+}
+
+.shoe-remove-btn {
+    background-color: #F6C90E;
+    border: none;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
